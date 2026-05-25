@@ -1,0 +1,143 @@
+/* Cute styling for the love note card */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #ffe4f5, #f6d7ff 40%, #f8f0ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #40224a;
+}
+
+.card {
+  width: min(92vw, 520px);
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid #f5c0e6;
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(120, 61, 112, 0.12);
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.intro {
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1.6rem;
+  background: linear-gradient(135deg, #ff98d9, #ff6aa6);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 14px 26px rgba(255, 123, 184, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(255, 123, 184, 0.36);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.heart {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  animation: beat 1.2s ease-in-out infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.message-box {
+  margin-top: 1.8rem;
+  padding: 1.25rem 1.3rem;
+  background: #fff3fb;
+  border: 1px solid #ffd1ec;
+  border-radius: 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.floating-hearts {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  display: flex;
+  gap: 0.65rem;
+  opacity: 0.85;
+}
+
+.floating-hearts span {
+  display: inline-block;
+  font-size: 1.35rem;
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+.floating-hearts span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.floating-hearts span:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(56, 17, 52, 0.65);
+  backdrop-filter: blur(3px);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.popup-card {
+  width: min(100%, 480px);
+  background: #fff6ff;
+  border: 1px solid #f3c0e4;
+  border-radius: 28px;
+  padding: 1.75rem;
+  box-shadow: 0 30px 70px rgba(102, 47, 95, 0.16);
+  text-align: left;
+}
+
+.popup-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.55rem;
+}
+
+.popup-card p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+}
+
+.close-button {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}

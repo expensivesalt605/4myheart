@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Alesha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main container for the cute interactive note -->
+  <main class="card">
+    <h1>For My Favorite Person 💖</h1>
+    <p class="intro">Click the heart (again and again!)</p>
+
+    <!-- Interactive button triggers a new message -->
+    <button id="heartButton" aria-label="Show love message">
+      <span class="heart">❤️</span>
+      Tap me!
+    </button>
+
+    <!-- New button that opens a love paragraph popup -->
+    <button id="lovePopupButton" aria-label="Read a love note">
+      <span class="heart">💌</span>
+      Read my love note
+    </button>
+
+    <!-- Area where messages are shown dynamically -->
+    <div id="messageBox" class="message-box">
+      <p>You're my sunshine, my safe space, and my whole heart.</p>
+    </div>
+
+    <!-- Hidden popup modal for the paragraph message -->
+    <div id="lovePopup" class="popup-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-card">
+        <h2 id="popupTitle">A note straight from my heart</h2>
+        <p>
+          I couldn't find a better way to start this little message than to remind you how much I love you. I've made a lot of bad decisions in my life but you are by far the very best. Throughout the good days and the bad, I promise to love you through it all and I'm always here for you as long as you need me. You are my best friend, my partner in crime, and the love of my life. I can't wait to see what the future holds for us together and always remember that Tiya loves you.
+        </p>
+        <button id="closePopup" class="close-button" aria-label="Close love note">Close</button>
+      </div>
+    </div>
+
+    <!-- Extra cute floating hearts animation -->
+    <div class="floating-hearts" aria-hidden="true">
+      <span>💌</span>
+      <span>💗</span>
+      <span>💘</span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
